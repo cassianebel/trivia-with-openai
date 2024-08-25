@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import "./App.css";
-import SubjectSelector from "./Components/SubjectSelector";
+import StarterForm from "./Components/StarterForm";
 import Quiz from "./Components/Quiz";
 
 function App() {
   const [subject, setSubject] = useState("");
+  const [difficulty, setDifficulty] = useState("easy");
+  const [number, setNumber] = useState(3);
   const navigate = useNavigate();
 
-  function handleSubjectChange(subject) {
+  function handleSubmit(subject, difficulty, number) {
     setSubject(subject);
+    setDifficulty(difficulty);
+    setNumber(number);
     navigate(`/quiz/${subject}`);
   }
 
@@ -18,12 +22,7 @@ function App() {
       <h1>Test Your Knowledge</h1>
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <SubjectSelector handleSubjectChange={handleSubjectChange} />
-          }
-        />
+        <Route path="/" element={<StarterForm handleSubmit={handleSubmit} />} />
         <Route
           path="/quiz"
           element={
@@ -34,7 +33,12 @@ function App() {
             )
           }
         />
-        <Route path="/quiz/:subject" element={<Quiz subject={subject} />} />
+        <Route
+          path="/quiz/:subject"
+          element={
+            <Quiz subject={subject} difficulty={difficulty} number={number} />
+          }
+        />
       </Routes>
     </>
   );
