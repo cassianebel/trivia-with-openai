@@ -1,13 +1,30 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="min-h-full">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Test Your Knowledge with OpenAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="bg-gray-100 flex flex-col min-h-screen justify-between">
+    <h1 class="font-black text-3xl m-3 my-10 text-center">
+      Test Your Knowledge
+    </h1>
+    <div id="root" class="flex justify-center mx-10"></div>
+    <footer class="text-center text-gray-500 text-sm my-10 mx-4">
+      <p>
+        Disclaimer: This trivia app is powered by AI magic. It tries really
+        hard, but sometimes it might get a little creative with the answers. So,
+        if something seems fishy, just remember: it’s all for fun, not for
+        fact-checking!
+      </p>
+    </footer>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

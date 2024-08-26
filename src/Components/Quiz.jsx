@@ -95,9 +95,15 @@ const Quiz = ({ subject, difficulty, number }) => {
 
   return (
     <div>
-      <p>{questions[currentQuestion]?.question}</p>
+      <p className="text-xl text-center italic">
+        {questions[currentQuestion]?.question}
+      </p>
       {questions[currentQuestion]?.choices.map((choice, index) => (
-        <button key={choice} onClick={() => handleAnswer(choice)}>
+        <button
+          key={choice}
+          onClick={() => handleAnswer(choice)}
+          className="block border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 my-5 mx-auto cursor-pointer w-full active:bg-electric-violet-700 focus-within:bg-electric-violet-600 focus-within:text-white active:text-white"
+        >
           {choice}
         </button>
       ))}

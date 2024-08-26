@@ -21,15 +21,33 @@ const Results = ({ userAnswers, questions }) => {
 
   return (
     <div>
-      <h2>Results {score + "/" + questions.length}</h2>
+      <h2 className="font-black text-2xl m-3 mb-10 text-center">
+        Results {score + "/" + questions.length}
+      </h2>
       {questions.map((question, index) => (
-        <div key={index}>
-          <h3>{question.question}</h3>
-          <p>Your answer: {userAnswers[index]}</p>
+        <div key={index} className="my-5">
+          <h3 className="text-lg italic">{question.question}</h3>
+          <p>
+            Your answer:{" "}
+            <span
+              className={
+                userAnswers[index] === question.answer
+                  ? "bg-malachite-300 px-2 py-1"
+                  : "bg-mexican-red-300 px-2 py-1"
+              }
+            >
+              {userAnswers[index]}
+            </span>
+          </p>
           <p>Correct answer: {question.answer}</p>
         </div>
       ))}
-      <button onClick={() => navigate(`/`)}>Play Again</button>
+      <button
+        onClick={() => navigate(`/`)}
+        className="border-2 border-electric-violet-700 bg-electric-violet-700 text-white font-semibold rounded-md p-2 px-4 my-10 cursor-pointer w-full"
+      >
+        Play Again
+      </button>
     </div>
   );
 };

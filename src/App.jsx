@@ -18,9 +18,7 @@ function App() {
   }
 
   return (
-    <>
-      <h1>Test Your Knowledge</h1>
-
+    <div className="max-w-xl">
       <Routes>
         <Route path="/" element={<StarterForm handleSubmit={handleSubmit} />} />
         <Route
@@ -40,7 +38,7 @@ function App() {
           }
         />
       </Routes>
-    </>
+    </div>
   );
 }
 
