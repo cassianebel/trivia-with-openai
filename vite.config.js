@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "trivia-with-openai",
+  base: "/trivia-with-openai/",
   css: {
     postcss: "./postcss.config.js",
   },

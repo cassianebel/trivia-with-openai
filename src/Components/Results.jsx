@@ -43,7 +43,7 @@ const Results = ({ userAnswers, questions }) => {
         </div>
       ))}
       <button
-        onClick={() => navigate(`/`)}
+        onClick={() => navigate(`/trivia-with-openai/`)}
         className="border-2 border-electric-violet-700 bg-electric-violet-700 text-white font-semibold rounded-md p-2 px-4 my-10 cursor-pointer w-full"
       >
         Play Again

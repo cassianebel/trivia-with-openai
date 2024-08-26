@@ -14,25 +14,28 @@ function App() {
     setSubject(subject);
     setDifficulty(difficulty);
     setNumber(number);
-    navigate(`/quiz/${subject}`);
+    navigate(`/trivia-with-openai/quiz/${subject}`);
   }
 
   return (
     <div className="max-w-xl">
       <Routes>
-        <Route path="/" element={<StarterForm handleSubmit={handleSubmit} />} />
         <Route
-          path="/quiz"
+          path="/trivia-with-openai"
+          element={<StarterForm handleSubmit={handleSubmit} />}
+        />
+        <Route
+          path="/trivia-with-openai/quiz"
           element={
             subject ? (
-              <Navigate to={`/quiz/${subject}`} replace />
+              <Navigate to={`/trivia-with-openai/quiz/${subject}`} replace />
             ) : (
-              <Navigate to="/" replace />
+              <Navigate to="/trivia-with-openai/" replace />
             )
           }
         />
         <Route
-          path="/quiz/:subject"
+          path="/trivia-with-openai/quiz/:subject"
           element={
             <Quiz subject={subject} difficulty={difficulty} number={number} />
           }
