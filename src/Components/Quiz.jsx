@@ -30,50 +30,15 @@ const Quiz = ({ subject, difficulty, number }) => {
 
   const fetchTriviaQuestions = async (subject, difficulty, number) => {
     console.log(subject, difficulty, number);
-    const response = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
-      {
-        model: "gpt-4o",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a helpful assistant that generates trivia questions.",
-          },
-          {
-            role: "user",
-            content: `Generate an array of ${number} multiple choice trivia questions and answers of ${difficulty} difficulty about ${subject} in JSON, formatted like this:
-            {
-                "triviaQuestions": [
-                    {
-                    "question": "What is the capital city of Australia?",
-                    "choices": ["Sydney", "Melbourne", "Brisbane", "Canberra"],
-                    "answer": "Canberra"
-                    },
-                ]
-            }`,
-          },
-        ],
-        temperature: 0.7,
-        max_tokens: 1000,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-        response_format: {
-          type: "json_object",
-        },
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-      }
+
+    const response = await fetch(
+      `https://cassia-proxy-server-0e93eb694b50.herokuapp.com/api/trivia?subject=${subject}&difficulty=${difficulty}&number=${number}`
     );
 
-    console.log(response.data.choices[0].message.content);
+    const data = await response.json();
+    console.log(data);
 
-    return JSON.parse(response.data.choices[0].message.content);
+    return JSON.parse(data);
   };
 
   const handleAnswer = (answer) => {
