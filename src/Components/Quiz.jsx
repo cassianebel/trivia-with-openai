@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Results from "./Results";
 
 const Quiz = ({ subject, difficulty, number }) => {
@@ -26,7 +25,7 @@ const Quiz = ({ subject, difficulty, number }) => {
       }
     };
     fetchQuestions();
-  }, [subject]);
+  }, []);
 
   const fetchTriviaQuestions = async (subject, difficulty, number) => {
     console.log(subject, difficulty, number);
@@ -51,7 +50,7 @@ const Quiz = ({ subject, difficulty, number }) => {
   }
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <div className="loader">Loading...</div>;
   }
 
   if (error) {
@@ -61,9 +60,9 @@ const Quiz = ({ subject, difficulty, number }) => {
   return (
     <div>
       <p className="text-xl text-center italic">
-        {questions[currentQuestion]?.question}
+        {questions[currentQuestion].question}
       </p>
-      {questions[currentQuestion]?.choices.map((choice, index) => (
+      {questions[currentQuestion].choices.map((choice, index) => (
         <button
           key={choice}
           onClick={() => handleAnswer(choice)}

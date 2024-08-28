@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <div className="max-w-xl">
+    <div className="max-w-lg">
       <Routes>
         <Route
           path="/trivia-with-openai"
