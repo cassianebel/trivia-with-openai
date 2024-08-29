@@ -21,29 +21,25 @@ const Results = ({ userAnswers, questions }) => {
 
   const percentage = Math.trunc((score / questions.length) * 100);
 
+  const over50 = [
+    "weird flex but ok",
+    "slay!",
+    "you ate!",
+    "low-key solid",
+    "not bad, fam!",
+  ];
+  const under50 = [
+    "it’s giving… room for improvement",
+    "low-key a warm-up",
+    "the vibes were off",
+    "you got this next time",
+  ];
+
   const exclamation = (percentage) => {
-    if (percentage === 100) {
-      return "weird flex but ok";
-    } else if (percentage > 90) {
-      return "slay";
-    } else if (percentage > 80) {
-      return "you ate";
-    } else if (percentage > 70) {
-      return "a whole vibe";
-    } else if (percentage > 60) {
-      return "low-key solid";
-    } else if (percentage > 50) {
-      return "not bad, fam";
-    } else if (percentage > 40) {
-      return "it’s giving… room for improvement";
-    } else if (percentage > 30) {
-      return "low-key a warm-up";
-    } else if (percentage > 20) {
-      return "the vibes are off";
-    } else if (percentage > 10) {
-      return "you got this next time";
+    if (percentage >= 50) {
+      return over50[Math.floor(Math.random() * over50.length)];
     } else {
-      return "a glow up in progress";
+      return under50[Math.floor(Math.random() * under50.length)];
     }
   };
 
@@ -53,7 +49,7 @@ const Results = ({ userAnswers, questions }) => {
 
   return (
     <div>
-      <h2 className="font-black text-2xl m-3 text-center mb-10 text-electric-violet-800">
+      <h2 className="font-black text-2xl m-3 text-center mb-10 text-electric-violet-500">
         {percentage}% <br />
         <span className="italic">{exclamation(percentage)}</span>
       </h2>
@@ -72,8 +68,8 @@ const Results = ({ userAnswers, questions }) => {
                 <span
                   className={
                     userAnswers[index] === question.answer
-                      ? "bg-malachite-200 px-2 py-1"
-                      : "bg-mexican-red-200 px-2 py-1"
+                      ? "bg-malachite-200 dark:bg-malachite-400 dark:text-zinc-950 px-2 py-1"
+                      : "bg-mexican-red-200 dark:bg-mexican-red-400 dark:text-zinc-950 px-2 py-1"
                   }
                 >
                   {userAnswers[index]}

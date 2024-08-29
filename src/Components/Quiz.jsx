@@ -66,7 +66,7 @@ const Quiz = ({ subject, difficulty, number }) => {
         <button
           key={choice}
           onClick={() => handleAnswer(choice)}
-          className="block border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 my-5 mx-auto cursor-pointer w-full active:bg-electric-violet-700 focus-within:bg-electric-violet-600 focus-within:text-white active:text-white"
+          className="block  bg-electric-violet-300 font-semibold rounded-md p-3 px-5 my-5 mx-auto cursor-pointer w-full active:bg-electric-violet-700 focus-within:bg-electric-violet-600 focus-within:text-white active:text-white dark:bg-electric-violet-950 dark:text-zinc-300"
         >
           {choice}
         </button>

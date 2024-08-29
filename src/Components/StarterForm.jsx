@@ -24,7 +24,7 @@ const StarterForm = ({ handleSubmit }) => {
 
   return (
     <>
-      <p className="mb-10 text-center">
+      <p className="mb-10 text-center text-zinc-700 dark:text-zinc-400">
         OpenAI's got the questions. Do you have the answers? Whether you're a
         science whiz, a pop culture pro, or a history aficionado, there's a
         challenge waiting for you.
@@ -41,7 +41,7 @@ const StarterForm = ({ handleSubmit }) => {
           id="subject"
           name="subject"
           onChange={onSubjectChange}
-          className="block w-full border-2 border-gray-700 font-semibold rounded-md p-2 mb-10"
+          className="block w-full border-2 border-zinc-700  dark:bg-zinc-700 font-semibold rounded-md p-2 mb-10"
         />
         <fieldset className="mb-10 p-4 pb-6 rounded-md border-2 border-transparent focus-within:border-electric-violet-700">
           <legend className="text-xl text-center block p-2 mx-auto">
@@ -60,7 +60,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="easy"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Easy
               </label>
@@ -77,7 +77,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="medium"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Medium
               </label>
@@ -94,7 +94,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="hard"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Hard
               </label>
@@ -118,7 +118,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="three"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 3
               </label>
@@ -135,7 +135,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="five"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 5
               </label>
@@ -152,7 +152,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="seven"
-                className="border-2 border-electric-violet-300 bg-electric-violet-300 font-semibold rounded-md p-2 px-4 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 7
               </label>
@@ -163,7 +163,7 @@ const StarterForm = ({ handleSubmit }) => {
         <button
           type="submit"
           disabled={selectedSubject === ""}
-          className="rounded-md p-2 px-4 my-10 cursor-pointer w-full border-2 border-malachite-400 bg-malachite-400 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+          className="rounded-md p-2 px-4 my-10 cursor-pointer w-full border-2 border-malachite-400 bg-malachite-400 font-semibold disabled:opacity-50 disabled:cursor-not-allowed text-zinc-950"
         >
           Start Quiz
         </button>
