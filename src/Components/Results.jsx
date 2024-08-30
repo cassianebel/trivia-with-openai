@@ -21,18 +21,11 @@ const Results = ({ userAnswers, questions }) => {
 
   const percentage = Math.trunc((score / questions.length) * 100);
 
-  const over50 = [
-    "weird flex but ok",
-    "slay!",
-    "you ate!",
-    "low-key solid",
-    "not bad, fam!",
-  ];
+  const over50 = ["weird flex but ok", "you ate", "not bad, fam"];
   const under50 = [
     "it’s giving… room for improvement",
     "low-key a warm-up",
     "the vibes were off",
-    "you got this next time",
   ];
 
   const exclamation = (percentage) => {

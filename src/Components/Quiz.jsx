@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Results from "./Results";
 
 const Quiz = ({ subject, difficulty, number }) => {
@@ -7,6 +7,7 @@ const Quiz = ({ subject, difficulty, number }) => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const hiddenElementRef = useRef(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -26,6 +27,12 @@ const Quiz = ({ subject, difficulty, number }) => {
     };
     fetchQuestions();
   }, []);
+
+  useEffect(() => {
+    if (hiddenElementRef.current) {
+      hiddenElementRef.current.focus();
+    }
+  }, [currentQuestion]);
 
   const fetchTriviaQuestions = async (subject, difficulty, number) => {
     console.log(subject, difficulty, number);
@@ -54,7 +61,7 @@ const Quiz = ({ subject, difficulty, number }) => {
   }
 
   if (error) {
-    return <p className="error">{error}</p>;
+    return <p className="error text-center">{error}</p>;
   }
 
   return (
@@ -62,6 +69,11 @@ const Quiz = ({ subject, difficulty, number }) => {
       <p className="text-xl text-center italic">
         {questions[currentQuestion].question}
       </p>
+      <div
+        className="absolute opacity-0 pointer-events-none"
+        tabIndex="-1"
+        ref={hiddenElementRef}
+      />
       {questions[currentQuestion].choices.map((choice, index) => (
         <button
           key={choice}
