@@ -16,6 +16,6 @@ Give it a try here: https://cassianebel.github.io/trivia-with-openai/
 - Frontend: React, Vite
 - Styling: TailwindCSS
 - API: OpenAI API
-- Deployment: GitHub Pages
+- Deployment: GitHub Pages and Heroku Proxy Server
 
 
