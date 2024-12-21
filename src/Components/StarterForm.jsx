@@ -60,7 +60,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="easy"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Easy
               </label>
@@ -77,7 +77,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="medium"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Medium
               </label>
@@ -94,7 +94,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="hard"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 Hard
               </label>
@@ -118,7 +118,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="three"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 3
               </label>
@@ -135,7 +135,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="five"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 5
               </label>
@@ -152,7 +152,7 @@ const StarterForm = ({ handleSubmit }) => {
               />
               <label
                 htmlFor="seven"
-                className=" bg-electric-violet-300 dark:bg-electric-violet-950 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
+                className=" bg-electric-violet-300 dark:bg-electric-violet-900 font-semibold rounded-md p-3 px-5 m-3 cursor-pointer peer-checked:bg-electric-violet-700 peer-checked:border-electric-violet-700 dark:text-zinc-400 peer-checked:text-white "
               >
                 7
               </label>
